@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #F5EFE6;
+    padding: 20px;
+}
+
+.todo {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    margin: 100px auto 22px;
+    padding: 50px 30px 60px;
+    border-radius: 12px;
+}
+
+.todo h1 {
+    color: #5C469C;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.todo h1 img {
+    width: 48px;
+    margin-left: 12px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ECF2FF;
+    border-radius: 32px;
+    padding-left: 16px;
+    margin-bottom: 25px;
+}
+
+#input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 16px 50px;
+    background: #5C469C;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+ul li {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    padding: 12px 10px 12px 40px;
+    position: relative;
+}
+
+ul li::before{
+    content: "";
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    background-image: url(images/circle.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.checked {
+    color: #DDD;
+    text-decoration: line-through;
+}
+
+.checked::before {
+    content: '';
+    background-image: url(images/checked.png);
+}
+
+
+ul li span {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: #9BABB8;
+    right: 0;
+    top: 3px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #DDD;
+}
+
+@media (max-width: 768px) {
+    .todo {
+        padding: 30px 20px;
+    }
+    
+    .input-row {
+        margin-bottom: 20px;
+    }
+    
+    #input-box {
+        padding: 10px;
+    }
+    
+    button {
+        padding: 12px 40px;
+        font-size: 12px;
+    }
+    
+    ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .todo {
+        padding: 20px;
+    }
+    
+    .input-row {
+        margin-bottom: 15px;
+    }
+    
+    #input-box {
+        padding: 8px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    
+    ul li {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+}
